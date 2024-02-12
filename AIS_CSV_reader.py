@@ -126,7 +126,7 @@ def c_countries():
             for row in MID:
                 if mmsi_countries[i][:3] == row['Digit']:
                     countries.append(row['Allocated to'])
-    unique_countries = set(countries)
+    unique_countries.append(set(countries))
     for j in unique_countries:
         country_j = countries.count(j)
         counted_countries.append(country_j)
